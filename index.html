@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#fff8ef">
+<title>Wiem Travel Services | Free to dream, ready to discover</title>
+<meta name="description" content="Agence de voyage de classe A à Hammamet : billetterie, séjours balnéaires, tourisme médical et saharien, excursions, voyages de noces.">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0e1a40;--cream:#fff8ef;--coral:#ff5b4a;--sun:#ffb400;--sea:#00b8a9;--sky:#2d7dff;--vio:#7a4dff;--mut:#5b6485;--r:28px;--serif:'Fraunces',Georgia,serif;--sans:'Manrope',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{font-family:var(--sans);background:var(--cream);color:var(--ink);line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--sky);outline-offset:3px;border-radius:8px}
+.w{width:min(1160px,92%);margin-inline:auto}
+section{padding:110px 0;position:relative}
+h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:-.02em;line-height:1.05}
+h2{font-size:clamp(2.1rem,5vw,3.6rem);margin-bottom:16px}
+em{font-style:italic;color:var(--coral)}
+.lead{color:var(--mut);font-size:1.1rem;max-width:56ch}
+.eyebrow{display:inline-flex;gap:10px;align-items:center;font-size:.76rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--sea);margin-bottom:16px}
+.eyebrow::before{content:"";width:28px;height:2px;background:currentColor}
+#bar{position:fixed;top:0;left:0;height:4px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--sea),var(--sky),var(--coral));z-index:100}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 28px;border-radius:999px;font:800 .95rem var(--sans);border:2px solid transparent;cursor:pointer;transition:transform .25s,box-shadow .25s,background .25s,color .25s}
+.btn.c{background:var(--coral);color:#fff;box-shadow:0 12px 28px #ff5b4a55}
+.btn.c:hover{transform:translateY(-3px);box-shadow:0 18px 34px #ff5b4a77}
+.btn.o{border-color:var(--ink)}.btn.o:hover{background:var(--ink);color:var(--cream)}
+/* header */
+header{position:fixed;top:14px;left:50%;transform:translateX(-50%);width:min(1180px,94%);z-index:60;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 12px 9px 22px;border-radius:999px;background:#fff8efd9;backdrop-filter:blur(16px);box-shadow:0 10px 40px #0e1a4018;border:1px solid #0e1a4010}
+.lg{width:164px;height:48px;display:block;color:var(--ink)}
+nav ul{display:flex;gap:2px;list-style:none;font-weight:700;font-size:.86rem}
+nav a{display:block;padding:9px 13px;border-radius:999px;transition:background .25s}
+nav a:hover,nav a.cur{background:#0e1a4012}
+.burger{display:none;width:44px;height:44px;border-radius:50%;border:0;background:var(--ink);color:var(--cream);font-size:1.3rem;cursor:pointer}
+/* themes */
+.t-sky{background:linear-gradient(160deg,#5aa2ff,#2d5bff 60%,#1b2a8f)}
+.t-sea{background:linear-gradient(160deg,#37e0d0,#009fa8 60%,#0a5a7a)}
+.t-vio{background:linear-gradient(160deg,#a78bff,#7a4dff 55%,#3b1fa8)}
+.t-sun{background:linear-gradient(160deg,#ffd25e,#ff8a3d 55%,#ff4d6d)}
+.t-lime{background:linear-gradient(160deg,#d4f24a,#27c47d 60%,#0a7a6a)}
+.t-coral{background:linear-gradient(160deg,#ff9a8a,#ff5b4a 55%,#c2185b)}
+/* hero */
+.hero{min-height:100vh;padding:150px 0 70px;display:flex;align-items:center;overflow:hidden}
+.hero .w{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center}
+.hero h1{font-size:clamp(2.8rem,7.2vw,5.8rem);margin-bottom:24px}
+.hero h1 span{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.08em}
+.hero h1 i{display:inline-block;font-style:normal;transform:translateY(110%);animation:up .9s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:calc(var(--i)*.09s + .1s)}
+@keyframes up{to{transform:none}}
+.hero .lead{margin-bottom:34px}.cta{display:flex;gap:14px;flex-wrap:wrap}
+.art{position:relative;height:580px}
+.arch{position:absolute;overflow:hidden;border-radius:999px 999px 30px 30px;box-shadow:0 30px 60px #0e1a4033}
+.a1{left:0;top:70px;width:230px;height:410px}.a2{left:252px;top:0;width:240px;height:500px}
+.ci{position:absolute;left:34px;bottom:6px;width:170px;height:170px;border-radius:50%;overflow:hidden;border:6px solid var(--cream);box-shadow:0 20px 40px #0e1a4033}
+.sunb{position:absolute;left:50%;top:110px;width:92px;height:92px;margin-left:-46px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff6c9,#ffd25e);box-shadow:0 0 60px #fff8;animation:pulse 5s ease-in-out infinite}
+.ci .sunb{top:26px;width:56px;height:56px;margin-left:-28px}
+@keyframes pulse{50%{transform:scale(1.1)}}
+.wv{position:absolute;left:0;bottom:-8px;width:1120px;height:80px;animation:wv 9s linear infinite}
+.wv.b{bottom:-22px;animation-duration:6s;animation-direction:reverse}
+@keyframes wv{to{transform:translateX(-560px)}}
+.dn{position:absolute;border-radius:50%}
+.pl{position:absolute;left:0;top:120px;width:52px;animation:fly 9s linear infinite}
+@keyframes fly{from{transform:translate(-70px,50px) rotate(-14deg)}to{transform:translate(310px,-50px) rotate(-14deg)}}
+.ring{position:absolute;left:30px;bottom:-60px;width:180px;height:180px;border-radius:50%;border:2px solid #ffffff66;animation:rip 5s ease-out infinite}
+@keyframes rip{from{transform:scale(.4);opacity:1}to{transform:scale(2);opacity:0}}
+.chip{position:absolute;left:14px;right:14px;bottom:14px;padding:12px 16px;border-radius:18px;background:#fffffff0;font-weight:800;font-size:.82rem;display:flex;justify-content:space-between;color:var(--ink)}
+.badge{position:absolute;right:-4px;bottom:36px;width:124px;height:124px;border-radius:50%;background:var(--ink);color:var(--cream);display:grid;place-items:center;box-shadow:0 20px 40px #0e1a4044}
+.badge .rot{position:absolute;inset:0;animation:spin 18s linear infinite}
+.badge text{font:800 10.5px var(--sans);letter-spacing:3px;fill:var(--cream)}
+.badge .pi{width:34px;fill:var(--sun)}
+@keyframes spin{to{transform:rotate(360deg)}}
+/* marquee */
+.marq{background:var(--ink);color:var(--cream);padding:24px 0;overflow:hidden;white-space:nowrap}
+.marq div{display:inline-flex;will-change:transform;font:italic 500 2.1rem var(--serif)}
+.marq span::after{content:"\2726";color:var(--sun);margin:0 40px;font-style:normal}
+@keyframes marq{to{transform:translateX(-50%)}}
+/* bento */
+.bento{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:46px}
+.tile{position:relative;min-height:300px;border-radius:var(--r);padding:28px;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;transition:transform .4s,box-shadow .4s}
+.tile.w2{grid-column:span 2}
+.tile::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:#ffffff22;transition:transform .6s}
+.tile:hover{translate:0 -8px;box-shadow:0 26px 50px #0e1a4040}.tile:hover::after{transform:scale(1.4)}
+.ico{position:absolute;left:26px;top:26px;width:54px;height:54px;border-radius:50%;background:#ffffff33;display:grid;place-items:center;z-index:1}
+.ico svg,.go svg{width:26px;height:26px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.tile h3{font-size:1.9rem;margin-bottom:8px}.tile p{font-size:.95rem;opacity:.94;max-width:38ch;padding-right:50px}
+.go{position:absolute;right:22px;bottom:22px;width:44px;height:44px;border-radius:50%;background:#fff;display:grid;place-items:center;transition:transform .3s}
+.go svg{stroke:var(--ink);width:20px;height:20px}.tile:hover .go{transform:rotate(-45deg)}
+/* dark */
+.dark{background:var(--ink);color:var(--cream)}.dark .lead{color:#b8c2e6}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:50px}
+.why div{position:relative;padding-top:22px}.why div::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:#ffffff55;transform:scaleX(0);transform-origin:left;transition:transform 1.2s .25s cubic-bezier(.2,.8,.2,1)}.why div.in::before{transform:none}.why b{display:block;font:italic 500 3.4rem/1 var(--serif);color:var(--sun);margin-bottom:12px}
+.why h3{font-size:1.3rem;margin-bottom:6px}.why p{color:#b8c2e6;font-size:.95rem}
+.band{margin:0 calc(14px*(1 - var(--bp,0)));border-radius:calc(48px - 40px*var(--bp,0))}
+/* steps */
+.steps{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:50px}
+.steps::before,.steps::after{content:"";position:absolute;left:0;top:34px;height:3px;border-radius:3px}
+.steps::before{right:0;background:#0e1a4018}.steps::after{width:calc(var(--p,0)*100%);background:linear-gradient(90deg,var(--sea),var(--coral))}
+.st b{width:70px;height:70px;border-radius:50%;display:grid;place-items:center;background:var(--cream);border:3px solid var(--ink);font:600 1.8rem var(--serif);position:relative;z-index:1;margin-bottom:18px}
+.st h3{font-size:1.4rem;margin-bottom:6px}.st p{color:var(--mut)}
+/* faq */
+.faq{max-width:780px;margin-top:36px;display:grid;gap:12px}
+details{background:#fff;border-radius:22px;padding:0 26px;box-shadow:0 6px 24px #0e1a4010;transition:box-shadow .3s}
+details[open]{box-shadow:0 14px 34px #0e1a4020}
+summary{cursor:pointer;list-style:none;padding:20px 34px 20px 0;font-weight:800;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:1.7rem;color:var(--coral);transition:transform .3s}
+details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+details p{padding-bottom:20px;color:var(--mut)}
+/* pages */
+.page{display:none}.page.active{display:block}
+.ph{padding:170px 0 30px}.ph h1{font-size:clamp(2.6rem,6.4vw,5rem);margin-bottom:18px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.cards .tile{min-height:240px}.cards .tile p{padding:0}
+.sub{margin:56px 0 24px}
+.ck{list-style:none;display:grid;gap:10px;margin-top:14px}
+.ck li{display:flex;gap:12px;align-items:flex-start}
+.ck li::before{content:"\2713";flex:none;display:grid;place-items:center;width:22px;height:22px;margin-top:2px;border-radius:50%;background:var(--sea);color:#fff;font-size:.72rem;font-weight:800}
+.sr{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-bottom:80px}
+.sr:nth-child(even) .sv{order:2}
+.sv{min-height:340px;border-radius:var(--r);color:#fff;padding:30px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden}
+.sv::after{content:"";position:absolute;right:-70px;top:-70px;width:260px;height:260px;border-radius:50%;background:#ffffff22}
+.sv h3{font-size:2.2rem}.sr h2{font-size:clamp(1.8rem,3.4vw,2.6rem)}.sr .btn{margin-top:24px}
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 34px}
+.tabs button{padding:12px 24px;border-radius:999px;border:2px solid var(--ink);background:none;color:var(--ink);font:800 .92rem var(--sans);cursor:pointer;transition:background .25s,color .25s}
+.tabs button[aria-selected=true]{background:var(--ink);color:var(--cream)}
+.panel[hidden]{display:none}.panel>p{max-width:62ch;color:var(--mut);margin-bottom:26px}
+.pk{background:#fff;border-radius:var(--r);padding:30px;box-shadow:0 10px 34px #0e1a4012}.pk h3{font-size:1.5rem;margin-bottom:8px}.pk p{color:var(--mut)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+/* contact */
+.contact .w{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.info{list-style:none;margin-top:28px;display:grid;gap:16px}.info b{display:block;font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:var(--sea)}
+form{display:grid;gap:14px;background:#fff;padding:32px;border-radius:32px;box-shadow:0 24px 60px #0e1a4018}
+label{font-size:.84rem;font-weight:800}
+input,select,textarea{width:100%;margin-top:6px;padding:14px 16px;border-radius:16px;border:2px solid #0e1a4018;background:var(--cream);font:500 1rem var(--sans);color:var(--ink)}
+input:focus,select:focus,textarea:focus{border-color:var(--sea);outline:none}textarea{min-height:110px;resize:vertical}
+#msg{font-weight:800;color:var(--sea);min-height:1.4em}
+footer{padding:56px 0 40px;margin-top:70px}footer .w{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+footer .lg{color:var(--cream);width:192px;height:56px}footer p{color:#b8c2e6;font-size:.92rem}
+.wa{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:70;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 12px 28px #0e1a4055;transition:transform .25s}
+.wa:hover{transform:scale(1.1)}.wa svg{width:28px}
+.rv{opacity:0;transform:translateY(36px);filter:blur(6px);transition:opacity .9s,transform .9s cubic-bezier(.2,.8,.2,1),filter .9s}
+.rv.in{opacity:1;transform:none;filter:none}
+
+header{transition:top .45s cubic-bezier(.2,.8,.2,1)}header.hide{top:-100px}
+.sp .wm{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.12em;margin-bottom:-.12em}
+.sp .wm i{display:inline-block;font-style:inherit;transform:translateY(112%);transition:transform .95s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--i)*70ms)}
+.sp.in .wm i{transform:none}
+.bento .tile.rv{transform:translateY(70px) scale(.92) rotate(var(--rot,0deg))}.bento .tile.rv.in{transform:none}
+.tile.rv{transition:opacity .9s,transform .9s cubic-bezier(.2,.8,.2,1),filter .9s,translate .35s,box-shadow .35s}
+.tile::before{content:"";position:absolute;inset:0;background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),#ffffff33,transparent 60%);opacity:0;transition:opacity .3s;pointer-events:none}.tile:hover::before{opacity:1}
+.st b{transition:background .5s,color .5s,transform .5s}.st.on b{background:var(--ink);color:var(--cream);transform:scale(1.1)}
+#top{position:fixed;left:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:70;width:52px;height:52px;border:0;border-radius:50%;background:var(--ink);cursor:pointer;opacity:0;transform:translateY(20px);pointer-events:none;transition:opacity .3s,transform .3s;box-shadow:0 12px 28px #0e1a4055}
+#top.show{opacity:1;transform:none;pointer-events:auto}#top svg{width:100%;height:100%}
+#curtain{position:fixed;inset:0;z-index:200;pointer-events:none;display:flex;visibility:hidden}
+#curtain.in,#curtain.out{visibility:visible;pointer-events:auto}
+#curtain i{flex:1;transform:scaleY(0);transform-origin:bottom;transition:transform .55s cubic-bezier(.7,0,.2,1)}
+#curtain i:nth-child(1){background:#00b8a9}#curtain i:nth-child(2){background:#2d7dff;transition-delay:.06s}#curtain i:nth-child(3){background:#7a4dff;transition-delay:.12s}#curtain i:nth-child(4){background:#ff5b4a;transition-delay:.18s}#curtain i:nth-child(5){background:#ffb400;transition-delay:.24s}
+#curtain.in i{transform:scaleY(1)}#curtain.out i{transform:scaleY(0);transform-origin:top}
+#curtain span{position:absolute;inset:0;display:grid;place-items:center;font:italic 500 clamp(2.6rem,9vw,5.5rem) var(--serif);color:#fff;text-shadow:0 6px 40px #0e1a4066;opacity:0;transform:translateY(24px);transition:opacity .35s,transform .5s}
+#curtain.in span{opacity:1;transform:none;transition-delay:.4s}
+#curtain svg{position:absolute;left:0;top:64%;width:64px;opacity:0;filter:drop-shadow(0 8px 14px #0e1a4055)}
+#curtain.in svg{animation:cfly .9s .25s ease-in forwards}
+@keyframes cfly{from{transform:translateX(-90px);opacity:1}to{transform:translateX(calc(100vw + 90px));opacity:1}}
+@media(max-width:1100px){header>.btn{display:none}}
+@media(max-width:1000px){.burger{display:block}nav{display:none;position:fixed;inset:84px 4% auto 4%;background:var(--cream);border-radius:26px;padding:14px;box-shadow:0 30px 60px #0e1a4033}nav.open{display:block}nav ul{flex-direction:column}}
+@media(max-width:900px){section{padding:80px 0}.hero .w,.contact .w,.sr,.two{grid-template-columns:1fr}.art{height:500px;transform:scale(.88);transform-origin:top center}.bento{grid-template-columns:1fr}.tile.w2{grid-column:auto}.why{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr}.steps::before,.steps::after{display:none}.sr:nth-child(even) .sv{order:0}.sv{min-height:240px}.band{margin:0 calc(6px*(1 - var(--bp,0)));border-radius:calc(32px - 28px*var(--bp,0))}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv,.hero h1 i,.sp .wm i{opacity:1;transform:none;filter:none}#curtain{display:none}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<div id="curtain" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><span></span><svg viewBox="-30 -25 60 50"><path fill="#fff" d="M30 0 10-5-2-22h-6l6 18-16 1-4-7h-5l3 10-3 10h5l4-7 16 1-6 18h6L10 5z"/></svg></div>
+<button id="top" aria-label="Retour en haut"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="20" fill="none" stroke="#ffffff30" stroke-width="3"/><circle id="ring" cx="24" cy="24" r="20" fill="none" stroke="#ffb400" stroke-width="3" stroke-linecap="round" stroke-dasharray="125.7" stroke-dashoffset="125.7" transform="rotate(-90 24 24)"/><path d="M24 31V17M17 23l7-7 7 7" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="logo" viewBox="-9 -12 260.1 76"><defs><linearGradient id="lmg" gradientUnits="userSpaceOnUse" x1="6" y1="0" x2="76" y2="0"><stop offset="0" stop-color="#00c2b0"/><stop offset=".55" stop-color="#2d7dff"/><stop offset="1" stop-color="#7a4dff"/></linearGradient></defs><path d="M6 12C10 30 16 54 24 54C32 54 34 24 40 24C46 24 49 54 57 54C64 54 66 36 72.5 22" fill="none" stroke="url(#lmg)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="12" r="6" fill="#00c2b0"/><circle cx="6" cy="12" r="10.5" fill="none" stroke="#00c2b0" stroke-width="1.5" opacity=".45"/><path transform="translate(79.87 6.13) rotate(-65.10) scale(.5)" fill="#ff5b4a" d="M30 0 10-5-2-22h-6l6 18-16 1-4-7h-5l3 10-3 10h5l4-7 16 1-6 18h6L10 5z"/><path d="M118.06 44.00 106.48 15.20H113.32L121.12 36.14L119.08 36.20L126.70 15.20H130.54L138.16 36.20L136.12 36.14L143.92 15.20H150.76L139.18 44.00H135.34L127.54 24.08H129.70L121.90 44.00ZM154.30 44.00V15.20H160.90V44.00ZM181.00 44.60Q176.68 44.60 173.23 42.65Q169.78 40.70 167.77 37.28Q165.76 33.86 165.76 29.60Q165.76 25.34 167.74 21.95Q169.72 18.56 173.11 16.58Q176.50 14.60 180.64 14.60Q184.66 14.60 187.75 16.46Q190.84 18.32 192.61 21.56Q194.38 24.80 194.38 28.94Q194.38 29.66 194.29 30.41Q194.20 31.16 194.02 32.06H170.38V26.66H190.60L188.14 28.82Q188.02 26.18 187.12 24.38Q186.22 22.58 184.57 21.62Q182.92 20.66 180.52 20.66Q178.00 20.66 176.14 21.74Q174.28 22.82 173.26 24.77Q172.24 26.72 172.24 29.42Q172.24 32.12 173.32 34.16Q174.40 36.20 176.38 37.31Q178.36 38.42 180.94 38.42Q183.16 38.42 185.05 37.64Q186.94 36.86 188.26 35.36L192.46 39.62Q190.36 42.08 187.36 43.34Q184.36 44.60 181.00 44.60ZM199.06 44.00V15.20H205.66V44.00ZM218.20 44.00V26.84Q218.20 23.96 216.40 22.37Q214.60 20.78 211.96 20.78Q210.16 20.78 208.75 21.50Q207.34 22.22 206.50 23.57Q205.66 24.92 205.66 26.84L203.08 25.40Q203.08 22.10 204.52 19.70Q205.96 17.30 208.42 15.95Q210.88 14.60 213.94 14.60Q217.00 14.60 219.46 15.92Q221.92 17.24 223.36 19.64Q224.80 22.04 224.80 25.40V44.00ZM237.34 44.00V26.84Q237.34 23.96 235.54 22.37Q233.74 20.78 231.10 20.78Q229.36 20.78 227.92 21.50Q226.48 22.22 225.64 23.57Q224.80 24.92 224.80 26.84L221.08 25.40Q221.38 22.10 223.00 19.70Q224.62 17.30 227.17 15.95Q229.72 14.60 232.78 14.60Q235.90 14.60 238.42 15.92Q240.94 17.24 242.44 19.64Q243.94 22.04 243.94 25.40V44.00Z" fill="currentColor"/><circle cx="157.60" cy="4.10" r="5.10" fill="#ff5b4a"/><path d="M110.65 62.00V54.86H111.85V62.00ZM108.25 55.75V54.65H114.25V55.75ZM119.83 58.88V57.88H121.69Q122.24 57.88 122.55 57.60Q122.86 57.31 122.86 56.79Q122.86 56.33 122.56 56.02Q122.25 55.70 121.70 55.70H119.83V54.65H121.75Q122.44 54.65 122.97 54.93Q123.49 55.21 123.78 55.68Q124.07 56.16 124.07 56.77Q124.07 57.41 123.78 57.88Q123.49 58.36 122.97 58.62Q122.44 58.88 121.75 58.88ZM119.00 62.00V54.65H120.20V62.00ZM123.03 62.00 120.46 58.81 121.58 58.40 124.55 62.00ZM128.37 62.00 131.39 54.65H132.23L135.23 62.00H133.93L131.58 56.05H132.02L129.65 62.00ZM129.86 60.58V59.53H133.75V60.58ZM141.42 62.00 138.45 54.65H139.76L142.08 60.60H141.62L143.96 54.65H145.26L142.26 62.00ZM150.01 62.00V54.65H151.21V62.00ZM150.84 62.00V60.90H154.95V62.00ZM150.84 58.78V57.72H154.59V58.78ZM150.84 55.75V54.65H154.90V55.75ZM159.90 62.00V54.65H161.11V62.00ZM160.73 62.00V60.90H164.57V62.00ZM177.14 62.10Q176.27 62.10 175.66 61.79Q175.05 61.48 174.57 60.87L175.39 60.05Q175.69 60.49 176.11 60.73Q176.53 60.98 177.18 60.98Q177.79 60.98 178.15 60.73Q178.51 60.48 178.51 60.04Q178.51 59.67 178.33 59.44Q178.14 59.21 177.83 59.05Q177.52 58.90 177.14 58.78Q176.77 58.66 176.40 58.51Q176.03 58.36 175.72 58.13Q175.41 57.89 175.22 57.53Q175.03 57.16 175.03 56.59Q175.03 55.94 175.35 55.48Q175.67 55.03 176.22 54.79Q176.76 54.55 177.43 54.55Q178.16 54.55 178.73 54.83Q179.30 55.11 179.66 55.55L178.84 56.37Q178.53 56.02 178.18 55.84Q177.84 55.67 177.40 55.67Q176.86 55.67 176.55 55.89Q176.24 56.11 176.24 56.51Q176.24 56.84 176.43 57.05Q176.61 57.25 176.92 57.40Q177.23 57.54 177.61 57.66Q177.98 57.79 178.35 57.95Q178.72 58.10 179.03 58.35Q179.34 58.60 179.53 58.99Q179.72 59.38 179.72 59.96Q179.72 60.95 179.02 61.53Q178.33 62.10 177.14 62.10ZM184.63 62.00V54.65H185.84V62.00ZM185.46 62.00V60.90H189.58V62.00ZM185.46 58.78V57.72H189.22V58.78ZM185.46 55.75V54.65H189.52V55.75ZM195.35 58.88V57.88H197.21Q197.77 57.88 198.08 57.60Q198.39 57.31 198.39 56.79Q198.39 56.33 198.08 56.02Q197.78 55.70 197.22 55.70H195.35V54.65H197.28Q197.97 54.65 198.49 54.93Q199.02 55.21 199.31 55.68Q199.60 56.16 199.60 56.77Q199.60 57.41 199.31 57.88Q199.02 58.36 198.49 58.62Q197.97 58.88 197.28 58.88ZM194.52 62.00V54.65H195.73V62.00ZM198.56 62.00 195.98 58.81 197.11 58.40 200.08 62.00ZM206.85 62.00 203.87 54.65H205.19L207.51 60.60H207.04L209.39 54.65H210.68L207.69 62.00ZM215.43 62.00V54.65H216.64V62.00ZM225.27 62.10Q224.47 62.10 223.79 61.82Q223.12 61.53 222.61 61.01Q222.11 60.49 221.84 59.80Q221.56 59.11 221.56 58.33Q221.56 57.54 221.84 56.85Q222.11 56.16 222.61 55.65Q223.12 55.13 223.79 54.84Q224.47 54.55 225.27 54.55Q226.16 54.55 226.81 54.84Q227.46 55.13 227.97 55.64L227.15 56.46Q226.82 56.10 226.36 55.90Q225.89 55.70 225.27 55.70Q224.72 55.70 224.27 55.89Q223.82 56.08 223.49 56.43Q223.16 56.78 222.98 57.26Q222.80 57.75 222.80 58.33Q222.80 58.90 222.98 59.39Q223.16 59.87 223.49 60.22Q223.82 60.57 224.27 60.76Q224.72 60.95 225.27 60.95Q225.94 60.95 226.41 60.75Q226.88 60.54 227.20 60.18L228.02 61.00Q227.52 61.52 226.83 61.81Q226.15 62.10 225.27 62.10ZM232.80 62.00V54.65H234.01V62.00ZM233.63 62.00V60.90H237.75V62.00ZM233.63 58.78V57.72H237.39V58.78ZM233.63 55.75V54.65H237.70V55.75ZM244.56 62.10Q243.68 62.10 243.08 61.79Q242.47 61.48 241.98 60.87L242.80 60.05Q243.11 60.49 243.53 60.73Q243.95 60.98 244.60 60.98Q245.21 60.98 245.57 60.73Q245.93 60.48 245.93 60.04Q245.93 59.67 245.74 59.44Q245.55 59.21 245.24 59.05Q244.93 58.90 244.56 58.78Q244.19 58.66 243.82 58.51Q243.44 58.36 243.13 58.13Q242.82 57.89 242.63 57.53Q242.45 57.16 242.45 56.59Q242.45 55.94 242.77 55.48Q243.09 55.03 243.63 54.79Q244.18 54.55 244.85 54.55Q245.57 54.55 246.15 54.83Q246.72 55.11 247.08 55.55L246.26 56.37Q245.94 56.02 245.60 55.84Q245.26 55.67 244.82 55.67Q244.27 55.67 243.96 55.89Q243.65 56.11 243.65 56.51Q243.65 56.84 243.84 57.05Q244.03 57.25 244.34 57.40Q244.65 57.54 245.02 57.66Q245.40 57.79 245.77 57.95Q246.14 58.10 246.45 58.35Q246.76 58.60 246.95 58.99Q247.14 59.38 247.14 59.96Q247.14 60.95 246.44 61.53Q245.74 62.10 244.56 62.10Z" fill="currentColor" fill-opacity=".7"/></symbol></svg>
+
+<header>
+  <a href="#/home" aria-label="Wiem Travel Services, accueil"><svg class="lg" id="hlogo" viewBox="-9 -12 260.1 76" role="img" aria-label="Wiem Travel Services"><defs><linearGradient id="hdg" gradientUnits="userSpaceOnUse" x1="6" y1="0" x2="76" y2="0"><stop offset="0" stop-color="#00c2b0"/><stop offset=".55" stop-color="#2d7dff"/><stop offset="1" stop-color="#7a4dff"/></linearGradient></defs><path d="M6 12C10 30 16 54 24 54C32 54 34 24 40 24C46 24 49 54 57 54C64 54 66 36 72.5 22" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" fill="none" stroke="url(#hdg)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"><animate attributeName="stroke-dashoffset" from="1" to="0" dur="2.4s" begin=".2s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines=".45 0 .25 1"/></path><circle cx="6" cy="12" r="0" fill="#00c2b0"><animate attributeName="r" values="0;7.5;6" dur=".5s" begin="0s" fill="freeze"/></circle><circle cx="6" cy="12" r="6" fill="none" stroke="#00c2b0" stroke-width="1.5" opacity="0"><animate attributeName="r" values="6;16" dur="2.4s" begin=".6s" repeatCount="indefinite"/><animate attributeName="opacity" values=".55;0" dur="2.4s" begin=".6s" repeatCount="indefinite"/></circle><g opacity="0"><animate attributeName="opacity" from="0" to="1" dur=".2s" begin=".2s" fill="freeze"/><animateMotion path="M6 12C10 30 16 54 24 54C32 54 34 24 40 24C46 24 49 54 57 54C64 54 66 36 72.5 22L79.87 6.13" rotate="auto" dur="2.5s" begin=".2s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines=".45 0 .25 1"/><g><animateTransform attributeName="transform" type="translate" values="0 0;0 -1.4;0 0" dur="3s" begin="2.9s" repeatCount="indefinite"/><path transform="scale(.5)" fill="#ff5b4a" d="M30 0 10-5-2-22h-6l6 18-16 1-4-7h-5l3 10-3 10h5l4-7 16 1-6 18h6L10 5z"/></g></g><clipPath id="hdk"><rect x="100" y="-12" width="0" height="76"><animate attributeName="width" from="0" to="155" dur=".9s" begin="1.3s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines=".2 .7 .2 1"/></rect></clipPath><g clip-path="url(#hdk)"><path d="M118.06 44.00 106.48 15.20H113.32L121.12 36.14L119.08 36.20L126.70 15.20H130.54L138.16 36.20L136.12 36.14L143.92 15.20H150.76L139.18 44.00H135.34L127.54 24.08H129.70L121.90 44.00ZM154.30 44.00V15.20H160.90V44.00ZM181.00 44.60Q176.68 44.60 173.23 42.65Q169.78 40.70 167.77 37.28Q165.76 33.86 165.76 29.60Q165.76 25.34 167.74 21.95Q169.72 18.56 173.11 16.58Q176.50 14.60 180.64 14.60Q184.66 14.60 187.75 16.46Q190.84 18.32 192.61 21.56Q194.38 24.80 194.38 28.94Q194.38 29.66 194.29 30.41Q194.20 31.16 194.02 32.06H170.38V26.66H190.60L188.14 28.82Q188.02 26.18 187.12 24.38Q186.22 22.58 184.57 21.62Q182.92 20.66 180.52 20.66Q178.00 20.66 176.14 21.74Q174.28 22.82 173.26 24.77Q172.24 26.72 172.24 29.42Q172.24 32.12 173.32 34.16Q174.40 36.20 176.38 37.31Q178.36 38.42 180.94 38.42Q183.16 38.42 185.05 37.64Q186.94 36.86 188.26 35.36L192.46 39.62Q190.36 42.08 187.36 43.34Q184.36 44.60 181.00 44.60ZM199.06 44.00V15.20H205.66V44.00ZM218.20 44.00V26.84Q218.20 23.96 216.40 22.37Q214.60 20.78 211.96 20.78Q210.16 20.78 208.75 21.50Q207.34 22.22 206.50 23.57Q205.66 24.92 205.66 26.84L203.08 25.40Q203.08 22.10 204.52 19.70Q205.96 17.30 208.42 15.95Q210.88 14.60 213.94 14.60Q217.00 14.60 219.46 15.92Q221.92 17.24 223.36 19.64Q224.80 22.04 224.80 25.40V44.00ZM237.34 44.00V26.84Q237.34 23.96 235.54 22.37Q233.74 20.78 231.10 20.78Q229.36 20.78 227.92 21.50Q226.48 22.22 225.64 23.57Q224.80 24.92 224.80 26.84L221.08 25.40Q221.38 22.10 223.00 19.70Q224.62 17.30 227.17 15.95Q229.72 14.60 232.78 14.60Q235.90 14.60 238.42 15.92Q240.94 17.24 242.44 19.64Q243.94 22.04 243.94 25.40V44.00Z" fill="currentColor"/></g><circle cx="157.60" cy="4.10" r="5.10" fill="#ff5b4a" opacity="0"><animate attributeName="cy" values="-13.90;4.10;0.60;4.10" keyTimes="0;.55;.8;1" dur=".7s" begin="1.9s" fill="freeze"/><animate attributeName="opacity" from="0" to="1" dur=".15s" begin="1.9s" fill="freeze"/></circle><path d="M110.65 62.00V54.86H111.85V62.00ZM108.25 55.75V54.65H114.25V55.75ZM119.83 58.88V57.88H121.69Q122.24 57.88 122.55 57.60Q122.86 57.31 122.86 56.79Q122.86 56.33 122.56 56.02Q122.25 55.70 121.70 55.70H119.83V54.65H121.75Q122.44 54.65 122.97 54.93Q123.49 55.21 123.78 55.68Q124.07 56.16 124.07 56.77Q124.07 57.41 123.78 57.88Q123.49 58.36 122.97 58.62Q122.44 58.88 121.75 58.88ZM119.00 62.00V54.65H120.20V62.00ZM123.03 62.00 120.46 58.81 121.58 58.40 124.55 62.00ZM128.37 62.00 131.39 54.65H132.23L135.23 62.00H133.93L131.58 56.05H132.02L129.65 62.00ZM129.86 60.58V59.53H133.75V60.58ZM141.42 62.00 138.45 54.65H139.76L142.08 60.60H141.62L143.96 54.65H145.26L142.26 62.00ZM150.01 62.00V54.65H151.21V62.00ZM150.84 62.00V60.90H154.95V62.00ZM150.84 58.78V57.72H154.59V58.78ZM150.84 55.75V54.65H154.90V55.75ZM159.90 62.00V54.65H161.11V62.00ZM160.73 62.00V60.90H164.57V62.00ZM177.14 62.10Q176.27 62.10 175.66 61.79Q175.05 61.48 174.57 60.87L175.39 60.05Q175.69 60.49 176.11 60.73Q176.53 60.98 177.18 60.98Q177.79 60.98 178.15 60.73Q178.51 60.48 178.51 60.04Q178.51 59.67 178.33 59.44Q178.14 59.21 177.83 59.05Q177.52 58.90 177.14 58.78Q176.77 58.66 176.40 58.51Q176.03 58.36 175.72 58.13Q175.41 57.89 175.22 57.53Q175.03 57.16 175.03 56.59Q175.03 55.94 175.35 55.48Q175.67 55.03 176.22 54.79Q176.76 54.55 177.43 54.55Q178.16 54.55 178.73 54.83Q179.30 55.11 179.66 55.55L178.84 56.37Q178.53 56.02 178.18 55.84Q177.84 55.67 177.40 55.67Q176.86 55.67 176.55 55.89Q176.24 56.11 176.24 56.51Q176.24 56.84 176.43 57.05Q176.61 57.25 176.92 57.40Q177.23 57.54 177.61 57.66Q177.98 57.79 178.35 57.95Q178.72 58.10 179.03 58.35Q179.34 58.60 179.53 58.99Q179.72 59.38 179.72 59.96Q179.72 60.95 179.02 61.53Q178.33 62.10 177.14 62.10ZM184.63 62.00V54.65H185.84V62.00ZM185.46 62.00V60.90H189.58V62.00ZM185.46 58.78V57.72H189.22V58.78ZM185.46 55.75V54.65H189.52V55.75ZM195.35 58.88V57.88H197.21Q197.77 57.88 198.08 57.60Q198.39 57.31 198.39 56.79Q198.39 56.33 198.08 56.02Q197.78 55.70 197.22 55.70H195.35V54.65H197.28Q197.97 54.65 198.49 54.93Q199.02 55.21 199.31 55.68Q199.60 56.16 199.60 56.77Q199.60 57.41 199.31 57.88Q199.02 58.36 198.49 58.62Q197.97 58.88 197.28 58.88ZM194.52 62.00V54.65H195.73V62.00ZM198.56 62.00 195.98 58.81 197.11 58.40 200.08 62.00ZM206.85 62.00 203.87 54.65H205.19L207.51 60.60H207.04L209.39 54.65H210.68L207.69 62.00ZM215.43 62.00V54.65H216.64V62.00ZM225.27 62.10Q224.47 62.10 223.79 61.82Q223.12 61.53 222.61 61.01Q222.11 60.49 221.84 59.80Q221.56 59.11 221.56 58.33Q221.56 57.54 221.84 56.85Q222.11 56.16 222.61 55.65Q223.12 55.13 223.79 54.84Q224.47 54.55 225.27 54.55Q226.16 54.55 226.81 54.84Q227.46 55.13 227.97 55.64L227.15 56.46Q226.82 56.10 226.36 55.90Q225.89 55.70 225.27 55.70Q224.72 55.70 224.27 55.89Q223.82 56.08 223.49 56.43Q223.16 56.78 222.98 57.26Q222.80 57.75 222.80 58.33Q222.80 58.90 222.98 59.39Q223.16 59.87 223.49 60.22Q223.82 60.57 224.27 60.76Q224.72 60.95 225.27 60.95Q225.94 60.95 226.41 60.75Q226.88 60.54 227.20 60.18L228.02 61.00Q227.52 61.52 226.83 61.81Q226.15 62.10 225.27 62.10ZM232.80 62.00V54.65H234.01V62.00ZM233.63 62.00V60.90H237.75V62.00ZM233.63 58.78V57.72H237.39V58.78ZM233.63 55.75V54.65H237.70V55.75ZM244.56 62.10Q243.68 62.10 243.08 61.79Q242.47 61.48 241.98 60.87L242.80 60.05Q243.11 60.49 243.53 60.73Q243.95 60.98 244.60 60.98Q245.21 60.98 245.57 60.73Q245.93 60.48 245.93 60.04Q245.93 59.67 245.74 59.44Q245.55 59.21 245.24 59.05Q244.93 58.90 244.56 58.78Q244.19 58.66 243.82 58.51Q243.44 58.36 243.13 58.13Q242.82 57.89 242.63 57.53Q242.45 57.16 242.45 56.59Q242.45 55.94 242.77 55.48Q243.09 55.03 243.63 54.79Q244.18 54.55 244.85 54.55Q245.57 54.55 246.15 54.83Q246.72 55.11 247.08 55.55L246.26 56.37Q245.94 56.02 245.60 55.84Q245.26 55.67 244.82 55.67Q244.27 55.67 243.96 55.89Q243.65 56.11 243.65 56.51Q243.65 56.84 243.84 57.05Q244.03 57.25 244.34 57.40Q244.65 57.54 245.02 57.66Q245.40 57.79 245.77 57.95Q246.14 58.10 246.45 58.35Q246.76 58.60 246.95 58.99Q247.14 59.38 247.14 59.96Q247.14 60.95 246.44 61.53Q245.74 62.10 244.56 62.10Z" fill="currentColor" fill-opacity=".7" opacity="0"><animate attributeName="opacity" from="0" to="1" dur=".8s" begin="2s" fill="freeze"/></path></svg></a>
+  <nav id="nav" aria-label="Navigation principale"><ul>
+    <li><a href="#/home" data-p="home">Accueil</a></li><li><a href="#/specialites" data-p="specialites">Spécialités</a></li><li><a href="#/billetterie" data-p="billetterie">Billetterie</a></li><li><a href="#/hotels" data-p="hotels">Hôtels</a></li><li><a href="#/voyage" data-p="voyage">Voyages</a></li><li><a href="#/omra" data-p="omra">Omra</a></li><li><a href="#/excursions" data-p="excursions">Excursions</a></li><li><a href="#contact">Contact</a></li></ul></nav>
+  <a href="#contact" class="btn c">Demander un devis</a>
+  <button class="burger" id="burger" aria-label="Menu">&#9776;</button>
+</header>
+
+<main>
+<div class="page active" data-page="home">
+<section class="hero"><div class="w">
+  <div>
+    <span class="eyebrow">Agence de classe A · Hammamet</span>
+    <h1><span><i style="--i:0">Free</i></span> <span><i style="--i:1">to</i></span> <span><i style="--i:2"><em>dream,</em></i></span> <span><i style="--i:3">ready</i></span> <span><i style="--i:4">to</i></span> <span><i style="--i:5"><em>discover.</em></i></span></h1>
+    <p class="lead">Billetterie, séjours balnéaires, tourisme médical et saharien, excursions et voyages de noces : vous choisissez le rêve, nous construisons le voyage.</p>
+    <div class="cta"><a href="#/specialites" class="btn c">Nos spécialités</a><a href="#contact" class="btn o">Planifier mon voyage</a></div>
+  </div>
+  <div class="art" aria-hidden="true">
+    <div class="arch a1 t-sun" data-s=".05"><div class="sunb"></div>
+      <svg class="wv" viewBox="0 0 1120 80"><path fill="#00b8a9" d="M0 24Q70 0 140 24T280 24T420 24T560 24T700 24T840 24T980 24T1120 24V80H0Z"/></svg>
+      <svg class="wv b" viewBox="0 0 1120 80"><path fill="#0a5a7a" d="M0 24Q70 0 140 24T280 24T420 24T560 24T700 24T840 24T980 24T1120 24V80H0Z"/></svg></div>
+    <div class="arch a2 t-sea" data-s="-.04"><div class="ring"></div>
+      <svg class="pl" viewBox="-30 -25 60 50"><path fill="#fff" d="M30 0 10-5-2-22h-6l6 18-16 1-4-7h-5l3 10-3 10h5l4-7 16 1-6 18h6L10 5z"/></svg>
+      <div class="chip"><span>Classe A</span><span>Hammamet</span></div></div>
+    <div class="ci t-coral" data-s=".09"><div class="sunb"></div><i class="dn" style="left:-40px;bottom:-60px;width:200px;height:110px;background:#ffb400"></i><i class="dn" style="left:50px;bottom:-70px;width:220px;height:120px;background:#c2185b"></i></div>
+    <div class="badge" data-s="-.07"><svg class="rot" viewBox="0 0 124 124"><defs><path id="cp" d="M62 62m-46 0a46 46 0 1 1 92 0a46 46 0 1 1-92 0"/></defs><text><textPath href="#cp">FREE TO DREAM · READY TO DISCOVER ·</textPath></text></svg><svg class="pi" viewBox="-30 -25 60 50"><path d="M30 0 10-5-2-22h-6l6 18-16 1-4-7h-5l3 10-3 10h5l4-7 16 1-6 18h6L10 5z"/></svg></div>
+  </div>
+</div></section>
+<div class="marq" aria-hidden="true"><div id="mq"></div></div>
+
+<section id="apercu"><div class="w">
+  <span class="eyebrow rv">Ce que nous faisons</span>
+  <h2 class="rv">Nos <em>spécialités</em></h2>
+  <p class="lead rv">Une gamme complète de services pour répondre aux envies les plus variées des voyageurs.</p>
+  <div class="bento" id="bento"></div>
+</div></section>
+
+<section class="dark band" id="pourquoi"><div class="w">
+  <span class="eyebrow rv">L'esprit Wiem</span>
+  <h2 class="rv">Pourquoi choisir <em>Wiem Travel</em> ?</h2>
+  <p class="lead rv">Une équipe dynamique et expérimentée, et l'art de créer des expériences inoubliables.</p>
+  <div class="why">
+    <div class="rv"><b>01</b><h3>Une expertise reconnue</h3><p>Un réseau de partenaires fiables, sélectionnés avec soin.</p></div>
+    <div class="rv"><b>02</b><h3>Des services sur mesure</h3><p>Adaptés à chaque style et à chaque budget.</p></div>
+    <div class="rv"><b>03</b><h3>Une approche humaine</h3><p>Une équipe passionnée, centrée sur vos envies.</p></div>
+    <div class="rv"><b>04</b><h3>Une présence locale</h3><p>Une agence au plus proche de ses clients, à Hammamet.</p></div>
+  </div>
+</div></section>
+
+<section id="processus"><div class="w">
+  <span class="eyebrow rv">Simple et rapide</span>
+  <h2 class="rv">Votre voyage en <em>trois étapes</em></h2>
+  <div class="steps" id="steps">
+    <div class="st rv"><b>1</b><h3>Vous rêvez</h3><p>Dates, budget, ambiance : un échange par téléphone, WhatsApp ou e-mail.</p></div>
+    <div class="st rv"><b>2</b><h3>Nous construisons</h3><p>Une proposition personnalisée, ajustable selon vos envies.</p></div>
+    <div class="st rv"><b>3</b><h3>Vous partez</h3><p>Billets, réservations et accompagnement : tout est prêt avant le départ.</p></div>
+  </div>
+</div></section>
+
+<section id="faq" style="padding-top:0"><div class="w">
+  <h2 class="rv">Questions <em>fréquentes</em></h2>
+  <div class="faq rv">
+    <details><summary>Quels services proposez-vous ?</summary><p>Billetterie nationale et internationale, tourisme balnéaire, médical et saharien, excursions sur mesure, packs mariage et voyages de noces.</p></details>
+    <details><summary>Puis-je avoir un programme sur mesure ?</summary><p>Oui, chaque proposition est adaptée à votre style, à vos envies et à votre budget.</p></details>
+    <details><summary>Où se trouve l'agence ?</summary><p>Avenue de la Libération, à Hammamet.</p></details>
+    <details><summary>Comment vous contacter ?</summary><p>Par téléphone au (+216) 54 275 268, par WhatsApp, par e-mail à info@wiemtravel.com ou avec le formulaire de cette page.</p></details>
+  </div>
+</div></section>
+</div>
+<div id="pages"></div>
+
+<section class="contact" id="contact"><div class="w">
+  <div class="rv">
+    <span class="eyebrow">Contact</span>
+    <h2>Parlons de votre <em>voyage</em></h2>
+    <p class="lead">Dites-nous où vous rêvez d'aller. Nous revenons vers vous avec une proposition personnalisée.</p>
+    <ul class="info"><li><b>Téléphone</b>(+216) 54 275 268</li><li><b>E-mail</b>info@wiemtravel.com</li><li><b>Adresse</b>Avenue de la Libération, Hammamet</li></ul>
+  </div>
+  <form id="form" class="rv" novalidate>
+    <label>Nom complet<input name="nom" autocomplete="name"></label>
+    <label>E-mail<input type="email" name="email" autocomplete="email"></label>
+    <label>Votre demande<select><option>Billetterie</option><option>Réservation d'hôtel</option><option>Séjour balnéaire</option><option>Voyage saharien</option><option>Tourisme médical</option><option>Voyage de noces</option><option>Omra</option><option>Excursion</option><option>Autre</option></select></label>
+    <label>Votre projet<textarea placeholder="Dates, nombre de voyageurs, budget..."></textarea></label>
+    <button class="btn c" type="submit" style="justify-content:center">Envoyer ma demande</button><p id="msg" role="status"></p>
+  </form>
+</div></section>
+</main>
+
+<footer class="dark"><div class="w"><svg class="lg"><use href="#logo"/></svg><p>Free to dream, ready to discover</p><p>Avenue de la Libération, Hammamet · <span id="yr"></span></p></div></footer>
+<a class="wa" href="https://wa.me/21654275268" target="_blank" rel="noopener" aria-label="Discuter sur WhatsApp"><svg viewBox="0 0 24 24"><path d="M3 21l1.600-4.800A9 9 0 1 1 8 19.500z" fill="#fff"/></svg></a>
+
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const IC={plane:'M21 3 3 10l7 3 3 7zM10 13 21 3',waves:'M2 8c2 0 2 2 4 2s2-2 4-2 2 2 4 2 2-2 4-2 2 2 4 2M2 15c2 0 2 2 4 2s2-2 4-2 2 2 4 2 2-2 4-2 2 2 4 2',cross:'M9 3h6v6h6v6h-6v6H9v-6H3V9h6z',sun:'M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM12 1v3M12 20v3M4 4l2 2M18 18l2 2M1 12h3M20 12h3M4 20l2-2M18 6l2-2',compass:'M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20zM16 8l-2 6-6 2 2-6z',heart:'M12 21s-8-5.500-8-11a4.500 4.500 0 0 1 8-2.800A4.500 4.500 0 0 1 20 10c0 5.500-8 11-8 11z',go:'M5 12h14M13 6l6 6-6 6'};
+const ic=n=>`<svg viewBox="0 0 24 24"><path d="${IC[n]}"/></svg>`;
+const ck=a=>`<ul class="ck">${a.map(x=>`<li>${x}</li>`).join('')}</ul>`;
+const S=[
+['billetterie','Billetterie','sky','plane','Réservation rapide et fiable, nationale et internationale, avec un accompagnement personnalisé.',['Vols nationaux et internationaux','Billets de train en Tunisie et à l\'étranger','Concerts, festivals et événements'],'#/billetterie',''],
+['balneaire','Tourisme balnéaire','sea','waves','Séjours détente sur les plus belles plages tunisiennes, avec hébergements haut de gamme et activités nautiques.',['Hammamet, plages animées et stations de luxe','Djerba, l\'île paradisiaque','Sousse et Tabarka'],'#/voyage','balneaire'],
+['sante','Tourisme médical','vio','cross','Organisation complète de séjours médicaux : soins spécialisés, cliniques partenaires, hébergement et suivi.',['Pack Thalasso &amp; Sérénité','Pack Chirurgie &amp; Esthétique','Pack Bien-être &amp; Détox'],'#/voyage','sante'],
+['saharien','Tourisme saharien','sun','sun','Immersion dans le désert tunisien : bivouacs, randonnées, découvertes culturelles et paysages à couper le souffle.',['Balade à dos de chameau au coucher du soleil','Dunes en 4×4 et nuit en bivouac','Oasis et villages berbères'],'#/voyage','saharien'],
+['excursions','Excursions sur mesure','lime','compass','Journées ou circuits organisés à travers les trésors naturels et historiques de la Tunisie.',['Désert de Douz','Oasis et villages berbères','Tozeur et ses festivals'],'#/excursions',''],
+['mariage','Mariage &amp; voyages de noces','coral','heart','Des expériences romantiques et personnalisées pour célébrer l\'amour : hébergement de luxe, accueil VIP, dîners romantiques, photographe professionnel.',['Hébergement de luxe et accueil VIP','Dîners romantiques et balades en bateau','Photographe professionnel'],'#/voyage','mariage']];
+const PK=[['Pack Thalasso &amp; Sérénité','Retrouvez l\'équilibre : soins marins, massages relaxants et spas de luxe en bord de mer.',['Accès illimité au centre de thalasso','Séances d\'hydrothérapie','Hébergement en hôtel 5 étoiles','Billets d\'avion inclus']],['Pack Chirurgie &amp; Esthétique','Un accompagnement complet avant, pendant et après votre intervention.',['Consultation pré-opératoire','Intervention dans une clinique moderne','Suivi médical personnalisé','Séjour post-opératoire de confort']],['Pack Bien-être &amp; Détox','Une pause pour votre corps et votre esprit.',['Programme de menus détox','Séances de yoga et méditation','Excursions en nature (désert, oasis)','Accès au hammam et sauna']]];
+const DEST=[['Hammamet','Plages animées et stations balnéaires de luxe.','sea'],['Djerba','Une île paradisiaque et des couchers de soleil spectaculaires.','sun'],['Sousse','Culture, histoire et vie nocturne en bord de mer.','coral'],['Tabarka','Paysages sauvages et fonds marins idéaux pour la plongée.','sky']];
+const tile=(c,t,p)=>`<div class="tile t-${c} rv"><h3>${t}</h3><p>${p}</p></div>`;
+const head=(e,t,l)=>`<section class="ph"><div class="w"><span class="eyebrow rv">${e}</span><h1 class="rv">${t}</h1><p class="lead rv">${l}</p></div></section>`;
+const body=h=>`<section style="padding-top:30px"><div class="w">${h}</div></section>`;
+const cta=t=>`<section style="padding:20px 0 40px"><div class="w"><div class="rv" style="display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;background:var(--ink);color:var(--cream);border-radius:36px;padding:38px 44px"><h2 style="margin:0;font-size:clamp(1.6rem,3vw,2.3rem)">${t}</h2><a href="#contact" class="btn c">Réserver</a></div></div></section>`;
+const pg=(id,h)=>`<div class="page" data-page="${id}">${h}</div>`;
+
+// accueil : bento, marquee
+$('#bento').innerHTML=S.map((s,i)=>`<a href="${s[6]}" ${s[7]?`data-tab="${s[7]}"`:''} class="tile t-${s[2]} rv ${[0,3,4].includes(i)?'w2':''}"><span class="ico">${ic(s[3])}</span><h3>${s[1]}</h3><p>${s[4]}</p><span class="go">${ic('go')}</span></a>`).join('');
+const mq=['Hammamet','Djerba','Douz','Tozeur','Sousse','Tabarka'].map(x=>`<span>${x}</span>`).join('');$('#mq').innerHTML=mq+mq;
+
+// pages
+const spec=S.map(s=>`<article class="sr rv"><div class="sv t-${s[2]}"><span class="ico" style="left:30px;top:30px">${ic(s[3])}</span><h3>${s[1]}</h3></div><div><h2>${s[1]}</h2><p class="lead">${s[4]}</p>${ck(s[5])}<a href="${s[6]}" ${s[7]?`data-tab="${s[7]}"`:''} class="btn c">En savoir plus</a></div></article>`).join('');
+const vt={
+ balneaire:`<p>Du sable fin de Hammamet aux eaux cristallines de Djerba, nos séjours balnéaires sont conçus pour la détente, le plaisir et l'évasion.</p><div class="cards">${DEST.map(d=>tile(d[2],d[0],d[1])).join('')}</div>`,
+ saharien:`<p>Plongez au cœur du désert tunisien, de Djerba à Douz, la « Porte du Désert » : paysages à couper le souffle, nuits sous un ciel étoilé et traditions nomades.</p><div class="two"><div class="tile t-sun rv" style="min-height:300px"><h3>Aventures sahariennes</h3><p>Dunes, oasis et veillées sous les étoiles.</p></div><div><h3 style="font-size:1.6rem">Ce que nos aventures incluent</h3>${ck(['Balade à dos de chameau au coucher du soleil','Exploration des dunes en 4×4','Nuit en bivouac (campement traditionnel)','Repas traditionnels et veillées autour du feu','Visite d\'oasis et de villages berbères'])}</div></div>`,
+ sante:`<p>Découvrez la Tunisie sous un nouvel angle : des séjours axés sur la santé, la détente et la revitalisation, avec des soins de haute qualité.</p><div class="cards">${PK.map(p=>`<div class="pk rv"><h3>${p[0]}</h3><p>${p[1]}</p>${ck(p[2])}</div>`).join('')}</div>`,
+ mariage:`<p>Offrez-vous le voyage de vos rêves pour commencer votre nouvelle vie à deux.</p><div class="two"><div class="tile t-coral rv" style="min-height:300px"><h3>Pack mariage</h3><p>Une expérience 100 % personnalisée, selon votre style et votre budget.</p></div><div><h3 style="font-size:1.6rem">Ce que comprend le pack</h3>${ck(['Voyage de noces sur mesure','Hébergement haut de gamme','Accueil VIP et transfert privé depuis l\'aéroport','Dîner romantique','Excursions exclusives et balade en bateau','Photographe professionnel'])}</div></div>`};
+const tabs=[['balneaire','Balnéaire'],['saharien','Saharien'],['sante','Santé &amp; bien-être'],['mariage','Pack mariage']];
+$('#pages').innerHTML=
+ pg('specialites',head('Ce que nous faisons','Nos <em>spécialités</em>','Agence de voyage de classe A au cœur de Hammamet, Wiem Travel conçoit des expériences inoubliables pour tous les voyageurs.')+body(spec)+cta('Un projet en tête ?'))+
+ pg('billetterie',head('Billetterie','Aérienne et <em>événementielle</em>','Que ce soit pour un vol international, un trajet en train ou l\'accès à un événement spécial, notre service de billetterie rapide et fiable vous garantit les meilleures options au meilleur prix.')+body(`<div class="cards">${tile('sky','Vols nationaux &amp; internationaux','Réservation de billets d\'avion vers toutes les destinations.')}${tile('sea','Billets de train','Simplifiez vos voyages en train en Tunisie et à l\'étranger.')}${tile('coral','Billets d\'événements','Accédez facilement aux grands concerts, festivals ou événements sportifs.')}</div><h2 class="sub rv">Destinations et événements <em>populaires</em></h2><div class="cards">${[['sun','Concerts d\'été en Tunisie'],['vio','Festival de danse folklorique à Tozeur'],['lime','Événements gastronomiques en Tunisie'],['sky','Zone touristique forestière']].map(x=>tile(x[0],x[1],'')).join('')}</div>`)+cta('Un billet, un événement, un vol ?'))+
+ pg('hotels',head('Hébergement','Réservation <em>d\'hôtel</em>','Des hébergements haut de gamme, choisis avec des partenaires sélectionnés avec soin, selon votre style et votre budget.')+body(`<div class="cards">${DEST.map(d=>tile(d[2],d[0],d[1])).join('')}</div>`)+cta('Dites-nous où vous voulez séjourner'))+
+ pg('voyage',head('Voyages en Tunisie','Quatre <em>univers</em>','Séjours balnéaires, aventures sahariennes, packs santé et voyages de noces : choisissez le vôtre.')+body(`<div class="tabs" role="tablist">${tabs.map((t,i)=>`<button role="tab" data-t="${t[0]}" aria-selected="${i==0}">${t[1]}</button>`).join('')}</div>${tabs.map((t,i)=>`<div class="panel" id="${t[0]}" ${i?'hidden':''}>${vt[t[0]]}</div>`).join('')}`)+cta('Parlons de votre voyage'))+
+ pg('omra',head('Omra','Voyagez <em>l\'esprit serein</em>','Wiem Travel vous accompagne dans l\'organisation de votre Omra. Contactez-nous pour connaître les programmes, les dates de départ et les tarifs.')+cta('Demander le programme Omra'))+
+ pg('excursions',head('Excursions','Sur <em>mesure</em>','Journées ou circuits organisés à travers les trésors naturels et historiques de la Tunisie.')+body(`<div class="cards">${tile('sun','Désert de Douz','Dunes en 4×4 et balade à dos de chameau au coucher du soleil.')}${tile('lime','Oasis &amp; villages berbères','Visites, repas traditionnels et veillées autour du feu.')}${tile('coral','Tozeur','Culture, traditions et festival de danse folklorique.')}${tile('sea','Tabarka','Côte sauvage et fonds marins idéaux pour la plongée.')}</div>`)+cta('Composons votre excursion'));
+
+// routeur
+const pages=$$('.page');
+let cur='home';function show(n){const t=pages.find(p=>p.dataset.page===n)||pages[0];const ch=t.dataset.page!==cur;cur=t.dataset.page;pages.forEach(p=>p.classList.toggle('active',p===t));if(ch&&typeof replay==='function')replay(t);$$('nav a[data-p]').forEach(a=>a.classList.toggle('cur',a.dataset.p===t.dataset.page));return t}
+function route(){const h=location.hash;
+  if(h.startsWith('#/')){show(h.slice(2));scrollTo({top:0,behavior:'instant'})}
+  else if(h.length>1){const el=document.getElementById(h.slice(1));if(el){const pg=el.closest('.page');if(pg)show(pg.dataset.page);el.scrollIntoView()}}
+  else show('home');onScroll()}
+function setTab(n){$$('.tabs button').forEach(x=>x.setAttribute('aria-selected',x.dataset.t===n));$$('.panel').forEach(p=>p.hidden=p.id!==n)}
+$$('.tabs button').forEach(b=>b.onclick=()=>setTab(b.dataset.t));
+document.addEventListener('click',e=>{const a=e.target.closest('[data-tab]');if(a)setTab(a.dataset.tab);if(e.target.closest('nav a'))$('#nav').classList.remove('open')});
+$('#burger').onclick=()=>$('#nav').classList.toggle('open');
+addEventListener('hashchange',()=>go());
+
+// animations au défilement
+const par=$$('[data-s]'),bar=$('#bar'),steps=$('#steps'),hd=document.querySelector('header'),hero=$('.hero .w>div'),band=$('.band'),ring=$('#ring'),totop=$('#top'),sts=$$('.st'),nv=$('#nav');let ly=0;
+function onScroll(){const y=scrollY,max=document.documentElement.scrollHeight-innerHeight,p=max>0?y/max:0;
+  bar.style.transform=`scaleX(${p})`;
+  if(y<1000){par.forEach(e=>e.style.transform=`translateY(${y*e.dataset.s}px)`);hero.style.opacity=Math.max(0,1-y/650);hero.style.transform=`translateY(${y*.18}px)`}
+  if(!nv.classList.contains('open')){if(y>240&&y>ly+6)hd.classList.add('hide');else if(y<ly-6||y<240)hd.classList.remove('hide')}
+  ly=y;ring.style.strokeDashoffset=125.7*(1-p);totop.classList.toggle('show',y>600);
+  const r=steps.getBoundingClientRect(),sp=Math.min(1,Math.max(0,(innerHeight*.75-r.top)/(r.height+innerHeight*.2)));
+  steps.style.setProperty('--p',sp);sts.forEach((t,i)=>t.classList.toggle('on',sp>(i+.2)/3));
+  const b=band.getBoundingClientRect();band.style.setProperty('--bp',Math.min(1,Math.max(0,(innerHeight-b.top)/(innerHeight*.6))))}
+addEventListener('scroll',()=>requestAnimationFrame(onScroll),{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){if(e.target.classList.contains('rv')){const sib=[...e.target.parentElement.children].filter(c=>c.classList.contains('rv'));e.target.style.transitionDelay=sib.indexOf(e.target)*90+'ms'}e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+$$('.rv').forEach(el=>io.observe(el));
+
+$('#yr').textContent=new Date().getFullYear();
+$('#form').addEventListener('submit',e=>{e.preventDefault();const f=e.target,m=$('#msg');
+  if(!f.nom.value.trim()||!/\S+@\S+\.\S+/.test(f.email.value)){m.textContent='Indiquez votre nom et une adresse e-mail valide.';return}
+  m.textContent='Demande envoyée. Nous vous répondons rapidement.';f.reset()});
+// titres mot par mot, tuiles, spotlight, retour en haut
+function split(el){let n=0;(function walk(node){[...node.childNodes].forEach(c=>{if(c.nodeType===3){const f=document.createDocumentFragment();c.textContent.split(/(\s+)/).forEach(t=>{if(!t)return;if(/^\s+$/.test(t)){f.append(' ');return}const w=document.createElement('span'),i=document.createElement('i');w.className='wm';i.style.setProperty('--i',n++);i.textContent=t;w.append(i);f.append(w)});c.replaceWith(f)}else if(c.nodeType===1)walk(c)})})(el);el.classList.remove('rv');el.classList.add('sp');io.observe(el)}
+$$('h2.rv,.ph h1.rv').forEach(split);
+$$('.bento .tile').forEach((t,i)=>t.style.setProperty('--rot',(i%2?2:-2)+'deg'));
+document.addEventListener('pointermove',e=>{const t=e.target.closest&&e.target.closest('.tile');if(t){const r=t.getBoundingClientRect();t.style.setProperty('--mx',(e.clientX-r.left)+'px');t.style.setProperty('--my',(e.clientY-r.top)+'px')}});
+$('#top').onclick=()=>scrollTo({top:0,behavior:'smooth'});
+const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+// bandeau de destinations lié au défilement
+const mqE=$('#mq');let mqx=0,lt=performance.now();
+if(!reduce)(function loop(t){mqx+=(t-lt)*.04;lt=t;const h=mqE.scrollWidth/2;if(h>0)mqE.style.transform=`translateX(${-((mqx+scrollY*.5)%h)}px)`;requestAnimationFrame(loop)})(lt);
+// transition de page : rideau de couleurs
+const NAMES={home:'Accueil',specialites:'Spécialités',billetterie:'Billetterie',hotels:'Hôtels',voyage:'Voyages',omra:'Omra',excursions:'Excursions'},cv=$('#curtain'),cl=cv.querySelector('span');let busy=false;
+function replay(pg){pg.querySelectorAll('.rv,.sp').forEach(el=>{el.classList.remove('in');el.style.transitionDelay='';io.observe(el)});pg.querySelectorAll('.hero h1 i').forEach(i=>{i.style.animation='none';i.offsetWidth;i.style.animation=''})}
+function go(){const h=location.hash;if(h.startsWith('#/')&&h.slice(2)!==cur&&!reduce){if(busy)return;busy=true;cl.textContent=NAMES[h.slice(2)]||'';cv.className='in';
+  setTimeout(()=>{route();cv.className='out';setTimeout(()=>{cv.className='';busy=false;const n=location.hash;if(n.startsWith('#/')&&n.slice(2)!==cur)go()},800)},820)}else if(!busy)route()}
+const hl=$('#hlogo');
+if(matchMedia('(prefers-reduced-motion:reduce)').matches){hl.pauseAnimations();hl.setCurrentTime(6)}
+else hl.addEventListener('mouseenter',()=>hl.setCurrentTime(0));
+show('home');route();
+</script>
+</body>
+</html>
